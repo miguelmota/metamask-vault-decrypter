@@ -1,0 +1,22 @@
+{
+  "name": "metamask-vault-decrypter",
+  "version": "0.0.1",
+  "description": "Decrypt MetaMask encrypted vault with password",
+  "main": "index.js",
+  "bin": {
+    "metamask-vault-decrypter": "bin/metamask-vault-decrypter"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard --fix index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "meow": "^9.0.0",
+    "node-passworder": "^2.0.4"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}

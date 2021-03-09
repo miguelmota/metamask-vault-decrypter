@@ -52,6 +52,7 @@ if (process.stdin) {
 }
 
 async function run (vault, password, passwordList) {
+  console.log(vault)
   if (!vault) {
     console.log('vault input is required')
     process.exit(1)
@@ -75,7 +76,7 @@ async function run (vault, password, passwordList) {
     console.log(JSON.stringify(result.decrypted, null, 2))
     process.exit(0)
   } catch (err) {
-    console.error(err.message)
+    console.log(err.message)
     process.exit(1)
   }
 }

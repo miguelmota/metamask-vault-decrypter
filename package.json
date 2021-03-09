@@ -1,14 +1,14 @@
 {
   "name": "metamask-vault-decrypter",
-  "version": "0.0.1",
-  "description": "Decrypt MetaMask encrypted vault with password",
+  "version": "0.0.2",
+  "description": "CLI to decrypt MetaMask encrypted vault with password",
   "main": "index.js",
   "bin": {
     "metamask-vault-decrypter": "bin/metamask-vault-decrypter"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "standard --fix index.js"
+    "test": "node test/test.js",
+    "lint": "standard --fix index.js test/test.js"
   },
   "author": "",
   "license": "MIT",

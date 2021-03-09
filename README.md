@@ -1,6 +1,6 @@
 # MetaMask Vault Decrypter
 
-> Decrypt MetaMask encrypted vault with password
+> CLI to decrypt MetaMask encrypted vault with password
 
 ## Install
 

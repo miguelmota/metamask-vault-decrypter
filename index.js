@@ -31,28 +31,33 @@ if (process.stdin) {
     content += buf.toString()
   })
   setTimeout(() => {
-    content = content.trim()
-
     let vault = (content || '')
     const password = cli.flags.password || ''
     const passwordList = cli.flags.passwordList || ''
 
     if (!content) {
-      vault = cli.input[0] || ''
+      const vaultFile = cli.input[0]
+      if (vaultFile) {
+        vault = fs.readFileSync(path.resolve(__dirname, vaultFile), 'utf8')
+      }
     }
 
     run(vault, password, passwordList)
   }, 10)
 } else {
-  const vault = cli.input[0]
+  const vaultFile = cli.input[0]
   const password = cli.flags.password || ''
   const passwordList = cli.flags.passwordList || ''
+  let vault = ''
+  if (vaultFile) {
+    vault = fs.readFileSync(path.resolve(__dirname, vaultFile), 'utf8')
+  }
 
   run(vault, password, passwordList)
 }
 
 async function run (vault, password, passwordList) {
-  console.log(vault)
+  vault = vault.trim()
   if (!vault) {
     console.log('vault input is required')
     process.exit(1)

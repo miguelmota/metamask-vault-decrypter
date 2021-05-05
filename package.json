@@ -1,6 +1,6 @@
 {
   "name": "metamask-vault-decrypter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CLI to decrypt MetaMask encrypted vault with password",
   "main": "index.js",
   "bin": {
@@ -18,5 +18,8 @@
   },
   "devDependencies": {
     "standard": "^16.0.3"
+  },
+  "engines": {
+    "node": ">=15.0.0"
   }
 }
